@@ -10,8 +10,7 @@
     http://www.springframework.org/schema/mvc
     https://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
 
-	<context:component-scan
-		base-package="smart.poc">
+	<context:component-scan base-package="smart.poc">
 		<!-- 扫描时跳过 @Controller 注解的JAVA类（控制器） -->
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -44,6 +43,7 @@
 		<property name="password" value="Abc123." />
 	</bean>
 
+
 	<!-- sqlSessionFactory -->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -62,7 +62,8 @@
 		</property>
 
 	</bean>
-	<bean id="pageInterceptor" class="smart.poc.intercepter.PageInterceptor">
+	<bean id="pageInterceptor"
+		class="smart.poc.intercepter.PageInterceptor">
 		<property name="limit" value="5" />
 	</bean>
 

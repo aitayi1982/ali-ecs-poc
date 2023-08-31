@@ -154,5 +154,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>alipoc</finalName>
 	</build>
 </project>

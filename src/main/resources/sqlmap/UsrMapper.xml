@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="smart.poc.mapping.UsrMapper">
+
+	<select id="selectById" parameterType="int"
+		resultType="smart.poc.pojo.Usr">
+		select id,username,sex,address,birthday
+		from user where
+		id=#{id};
+	</select>
+
+	<select id="queryAll" resultType="smart.poc.pojo.Usr">
+		select * from user;
+	</select>
+
+	<select id="listUsrsByPage" parameterType="map"
+		resultType="smart.poc.pojo.Usr">
+		select * from user
+	</select>
+	
+	<select id="totalUsrs" resultType="int">
+		select count(1) from user
+	</select>
+
+	<!-- 插入 -->
+	<insert id="insert" parameterType="smart.poc.pojo.Usr">
+		insert into user
+		(id,username,sex,address,birthday)values(#{id},#{username},#{sex},#{address},#{birthday});
+	</insert>
+	
+	<delete id="deleteUserById" parameterType="java.lang.Integer">
+		delete from user where id = #{id}
+	</delete>
+</mapper>

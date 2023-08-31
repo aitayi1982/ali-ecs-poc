@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bootstap 5 User POC Dashboard</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/alipoc/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/alipoc/css/all.min.css" />
+<link rel="stylesheet" href="/alipoc/css/styles.css" />
+<script src="/alipoc/js/bootstrap.js"></script>
+<script src="/alipoc/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<!-- 
+	<iframe scrolling="no" src="./static/bs_navbar.html"
+		style="width: 100%; height: 60px; border: none; margin-top: 1px; overflow: visible;"></iframe>
+    -->
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar -->
+		<div class="bg-white" id="sidebar-wrapper">
+			<div
+				class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+				<i class="fas fa-user-secret me-2"></i>MY POC APP
+			</div>
+			<div class="list-group list-group-flush my-3">
+				<a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text active"><i
+					class="fas fa-tachometer-alt me-2"></i>Dashboard</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-project-diagram me-2"></i>Projects</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-chart-line me-2"></i>Analytics</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-paperclip me-2"></i>Reports</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-shopping-cart me-2"></i>Store Mng</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-gift me-2"></i>Products</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-comment-dots me-2"></i>Chat</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+					class="fas fa-map-marker-alt me-2"></i>Outlet</a> <a href="#"
+					class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+					class="fas fa-power-off me-2"></i>Logout</a>
+			</div>
+		</div>
+		<!-- /#sidebar-wrapper -->
+
+
+		<!-- Below section is main content -->
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+			<nav
+				class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+				<div class="d-flex align-items-center">
+					<i class="fas fa-align-left primary-text fs-4 me-3"
+						id="menu-toggle"></i>
+					<h2 class="fs-2 m-0">Dashboard</h2>
+				</div>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle second-text fw-bold" href="#"
+							id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false"> <i class="fas fa-user me-2"></i>John
+								Doe
+						</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Profile</a></li>
+								<li><a class="dropdown-item" href="#">Settings</a></li>
+								<li><a class="dropdown-item" href="#">Logout</a></li>
+							</ul></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- ------main content------- -->
+			<div class="container-fluid px-4">
+				<div class="row g-3 my-2">
+					<div class="col-md-3">
+						<div
+							class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+							<div>
+								<h3 class="fs-2">720</h3>
+								<p class="fs-5">Products</p>
+							</div>
+							<i
+								class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div
+							class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+							<div>
+								<h3 class="fs-2">4920</h3>
+								<p class="fs-5">Sales</p>
+							</div>
+							<i
+								class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div
+							class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+							<div>
+								<h3 class="fs-2">3899</h3>
+								<p class="fs-5">Delivery</p>
+							</div>
+							<i
+								class="fas fa-truck fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div
+							class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+							<div>
+								<h3 class="fs-2">%25</h3>
+								<p class="fs-5">Increase</p>
+							</div>
+							<i
+								class="fas fa-chart-line fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- ------Table List------- -->
+
+				<div class="row my-5">
+
+					<div class="col">
+						<form method="post" th:action="@{/addusr}" th:object="${usr}">
+							<div class="mb-3 mt-3">
+								<label class="form-label">User Name:</label> <input
+									class="form-control" id="usernaem"
+									placeholder="Enter User Name" name="usernaem"
+									th:field="*{username}">
+							</div>
+							<div class="mb-3">
+								<label class="form-label">Address:</label> <input
+									class="form-control" id="address" placeholder="Enter Address"
+									name="address" th:field="*{address}">
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label">Birthday:</label> <input
+									class="form-control" id="birthday" placeholder="Enter birthday"
+									th:type="date" name="birthday" th:field="*{birthday}">
+							</div>
+
+							<div class="form-check">
+								<input type="radio" class="form-check-input" id="radio1"
+									name="sex" value="Male" th:field="*{sex}" checked>Male<label
+									class="form-check-label" for="radio1"></label>
+							</div>
+							<div class="form-check">
+								<input type="radio" class="form-check-input" id="radio2"
+									name="sex" value="Female" th:field="*{sex}">Female<label
+									class="form-check-label" for="radio2"></label>
+							</div>
+
+
+
+							<button type="submit" class="btn btn-primary">Submit</button>
+
+						</form>
+						<p>
+							<a th:href="@{/users}">返回</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<!-- ------main content------- -->
+		</div>
+	</div>
+	<!-- /#page-content-wrapper -->
+
+
+	<div class="container-fluid p-5 my-5 bg-dark text-white">
+		<h1>我的第一张 Bootstrap 页面</h1>
+		<p>这部分在 .container-fluid 类中。</p>
+		<p>未注册用户，请</p>
+		<p>.container-fluid 类提供全宽容器，跨越视口的整个宽度。</p>
+		<p>
+			<a class="text-decoration-none" th:href="@{/register}">注册</a>
+		</p>
+
+		<p class="text-success">已注册用户，去</p>
+		<p>
+			<a th:href="@{/login}">登陆</a>
+		</p>
+	</div>
+
+
+	<script>
+		var el = document.getElementById("wrapper");
+		var toggleButton = document.getElementById("menu-toggle");
+		toggleButton.onclick = function() {
+			el.classList.toggle("toggled");
+		};
+	</script>
+</body>
+</html>

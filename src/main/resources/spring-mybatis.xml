@@ -28,8 +28,9 @@
 		value="org.sqlite.JDBC" /> <property name="url" value="jdbc:sqlite:/Users/chenlin/dbdata/testDB.db" 
 		/> <property name="username" value="" /> <property name="password" value="" 
 		/> </bean> -->
-		
+
 	<!-- 配置数据源 -->
+	<!-- Update Datasource -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<!-- <property name="driverClassName" value="${jdbc.driver}" /> <property 

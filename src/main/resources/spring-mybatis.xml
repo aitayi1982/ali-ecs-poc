@@ -28,7 +28,7 @@
 		value="org.sqlite.JDBC" /> <property name="url" value="jdbc:sqlite:/Users/chenlin/dbdata/testDB.db" 
 		/> <property name="username" value="" /> <property name="password" value="" 
 		/> </bean> -->
-
+		
 	<!-- 配置数据源 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -38,9 +38,9 @@
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/DEMODB" />
+			value="jdbc:mysql://dbtest-mysql.mysql.rds.aliyuncs.com:3306/DEMODB" />
 		<property name="username" value="dbuser01" />
-		<property name="password" value="Abc123." />
+		<property name="password" value="P@ssword123" />
 	</bean>
 
 
